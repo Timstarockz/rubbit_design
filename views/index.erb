@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RÜBBIT</title>
+	
+	<link rel="stylesheet" href="/css/index.css">
+	
+	<script src="/js/jquery.min.js"></script>
+	<link rel="stylesheet" href="/css/foundation.min.css">
+	<script src="/js/foundation.min.js"></script>
+</head>
+
+<body>
+	
+	
+	
+<!-- ---------------------------- Nav Bar --------------------------------- -->
+	<div class="fixed">
+		<nav class="top-bar" data-topbar role="navigation">
+			
+		  <ul class="title-area">
+		    <li class="name">
+			 <a href="/"<><img src="/imgs/rbt_logo.png"></a>
+		    </li>
+		     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		    <!-- <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> -->
+		  </ul>
+
+		  <section class="top-bar-section">
+		  
+			<!-- Left Nav Section -->
+			<ul class="left">
+			<form method="post" action="/search">
+				<div class="small-10 columns">
+				  <input type="text" name="q" placeholder="search for articles" id="search-field">
+				</div>
+				<div class="small-2 columns">
+				  <button id="search-button" type="submit" class="button postfix">Search</button>
+				</div>
+			</form>
+			</ul>
+		  
+			<!-- Right Nav Section -->
+			<ul class="right">
+				
+			  <li class="active"><a href="/post" id="submit-button">+ Submit Article</a></li>
+			  
+			
+			  <li class="has-dropdown">
+			    <a href="/logout" id="dropdown-user"><img id="profile-picture-small" src="/imgs/av_sm_rnd.png">Sign Out</a>
+			  </li>
+			</ul>
+
+						
+		  </section>
+		  
+		</nav>
+	</div>
+<!-- ----------------------------- End (Nav Bar)  -------------------------------- -->
+	
+	
+	<div class="row">
+	  <div class="medium-9 columns" id="articles-row">
+  	<% 28.times do %>
+		<div class="large-1 columns">
+	  	   	<!-- <div id="votes">23</div> -->
+			
+		</div>
+		<div class="large-6 columns" id="cell">
+			<div id="article-box">
+				<h3 id="titleh3"><b id="article-title">Cool slow motion shots from movies, TV shows and music videos in 2014</b></h3>
+				<h5 id="description">Good riddance, 2014. And to celebrate turning a new calendar year, Evan Puschak, the Nerdwriter, put together this nifty look at how movies, TV shows and music videos used slow motion in 2014. It's interesting to see all these different types of films and shows use the same effect and question if they are even necessary.</h5>
+				<img id="placeholder-img" src="/imgs/placeholder.png">
+				<div class="small-2 columns" id="upvotes">
+					<a href="#artcile#upvote"><img id="upv-img" src="/imgs/upvote.png"></a>
+				  <a href="#artcile#upvote"><b id="upvotes-button">123</b></a>
+				</div>
+				<div class="small-2 columns" id="upvotes">
+					<a href="#artcile#downvote"><img id="dnv-img" src="/imgs/downvote.png"></a>
+				  <a href="#artcile#downvote"><b id="downvotes-button">3</b></a>
+				</div>
+				<div class="small-2 columns" id="upvotes">
+					<a href="#artcile#replies"><img id="repls-img" src="/imgs/replies.png"></a>
+				  <a href="#artcile#replies"><b id="replies-button">28 replies</b></a>
+				</div>
+			
+				<img id="vline-img" src="/imgs/vline.png">
+				<a id="category" href="#search#category"><span class="radius secondary label"><b>#Rails</b></span></a>
+		
+		
+		  	  	<hr id="move-down-sir"></hr>
+			</div>
+		</div>
+  	<% end %>
+	  </div>
+	  
+	  
+	  <div class="fixed" id="fixed-sidebar">
+		  	  <div class="medium-3 columns" id="side-bar-row">
+		  
+		  <!-- ---------------------------- Side Bar --------------------------------- -->
+		  		<div id="side-nav-title">
+		  			<b>CATEGORIES</b>
+		  			<hr>
+		  		</div>
+		  		<ul class="side-nav">
+		  		  <li><a href="#"><span id="tags-s" class="label">#RubyOnRails 10 (3)</span></a></li>
+		  		  <li><a href="#"><span id="tags-s" class="label">#HTML&CSS (3)</span></a></li>
+		  		  <li><a href="#"><span id="tags-s" class="label">#BlahBlahBlah (3)</span></a></li>
+		  		  <li><a href="#"><span id="tags-s" class="label">#RailsOnRuby (3)</span></a></li>
+		  		</ul>
+		  <!-- ---------------------------- End Side Bar --------------------------------- -->
+		  		<hr>
+		  		<h6 id="copyright">rübbits • ©2014</h6>
+		  	  </div>
+	  </div>
+	</div>
+
+</body>
+</html>

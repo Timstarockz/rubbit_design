@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RÜBBIT + Submit New Article</title>
+	
+	<link rel="stylesheet" href="/css/index.css">
+	
+	<script src="/js/jquery.min.js"></script>
+	<link rel="stylesheet" href="/css/foundation.min.css">
+	<script src="/js/foundation.min.js"></script>
+</head>
+
+<body>
+	<!-- ---------------------------- Nav Bar --------------------------------- -->
+		<div class="fixed">
+			<nav class="top-bar" data-topbar role="navigation">
+			
+			  <ul class="title-area">
+			    <li class="name">
+				 <a href="/"<><img src="/imgs/rbt_logo.png"></a>
+			    </li>
+			     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+			    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			  </ul>
+
+			  <section class="top-bar-section">
+		  
+				<!-- Left Nav Section -->
+				<ul class="left">
+				<form method="post" action="/search">
+					<div class="small-10 columns">
+					  <input type="text" name="q" placeholder="search for articles" id="search-field">
+					</div>
+					<div class="small-2 columns">
+					  <button id="search-button" type="submit" class="button postfix">Search</button>
+					</div>
+				</form>
+				</ul>
+		  
+				<!-- Right Nav Section -->
+				<ul class="right">
+				
+				  <li class="active"><a href="/post" id="submit-button">+ Submit Article</a></li>
+			  
+			
+				  <li class="has-dropdown">
+				    <a href="/logout" id="dropdown-user"><img id="profile-picture-small" src="/imgs/av_sm_rnd.png">Sign Out</a>
+				  </li>
+				</ul>
+
+						
+			  </section>
+		  
+			</nav>
+		</div>
+	<!-- ----------------------------- End (Nav Bar)  -------------------------------- -->
+</body>
+</html>
