@@ -9,7 +9,39 @@
 	<link rel="stylesheet" href="/css/foundation.min.css">
 	<script src="/js/foundation.min.js"></script>
 </head>
+<script type="text/javascript">
 
+$(function() {
+
+  
+
+  function addClassToElementInViewport(element, newClass) {
+    if (inViewport(element)) {
+      element.addClass(newClass);
+    }
+  }
+
+  function inViewport(element) {
+    if (typeof jQuery === "function" && element instanceof jQuery) {
+      element = element[0];
+    }
+    var elementBounds = element.getBoundingClientRect();
+    return (
+      elementBounds.top >= 0 &&
+      elementBounds.left >= 0 &&
+      elementBounds.bottom <= $(window).height() &&
+      elementBounds.right <= $(window).width()
+    );
+  }
+  
+  $(window).on('load resize scroll', function() {
+    addClassToElementInViewport($('.cell'));
+    // 👏 repeat as needed ...
+  });
+
+});
+
+</script>
 <body>
 	
 	
@@ -62,12 +94,15 @@
 	<div class="row">
 	  <div class="medium-9 columns" id="articles-row">
   	<% 28.times do %>
-		<div class="large-1 columns">
-	  	   	<!-- <div id="votes">23</div> -->
-			
-		</div>
 		<div class="large-6 columns" id="cell">
+			<div class="small-2 columns" id="upvotes">
+				<img id="user-pic" src="/imgs/av_sm_rnd.png">
+				<div id="username">timothy5216</div>
+				<br>
+			</div>
 			<div id="article-box">
+				
+				
 				<h3 id="titleh3"><b id="article-title">Cool slow motion shots from movies, TV shows and music videos in 2014</b></h3>
 				<h5 id="description">Good riddance, 2014. And to celebrate turning a new calendar year, Evan Puschak, the Nerdwriter, put together this nifty look at how movies, TV shows and music videos used slow motion in 2014. It's interesting to see all these different types of films and shows use the same effect and question if they are even necessary.</h5>
 				<img id="placeholder-img" src="/imgs/placeholder.png">

@@ -44,6 +44,7 @@ div#side-bar-row {
 b#article-title {
     font-size: 17pt;
     padding-left: 0px;
+    padding-top: -7px;
 }
 
 div#side-nav-title {
@@ -101,7 +102,7 @@ span#tags-s {
 }
 
 hr#move-down-sir {
-    padding-bottom: 23px;
+    padding-bottom: 0px;
     -webkit-transform: translate(0,10);
 }
 
@@ -176,6 +177,7 @@ div#vote-box {
 
 div#article-box {
     padding-left: -2px;
+    padding-top: 34px;
 }
 
 img#placeholder-img {
@@ -193,11 +195,13 @@ img#placeholder-img {
 h3#titleh3 {
     margin-left: 12px;
     color: dimgray;
+    /* margin-top: 2px; */
 }
 
 
 div#upvotes {
     width: auto;
+    height: 1px;
 }
 
 img#upv-img {
@@ -238,4 +242,13 @@ hr#vline {
 img#vline-img {
     padding-left: 10px;
     margin-top: -4px;
+}
+
+img#user-pic {
+    padding-left: 0px;
+}
+
+div#username {
+    margin-top: -24px;
+    margin-left: 36px;
 }
