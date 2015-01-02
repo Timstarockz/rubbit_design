@@ -44,7 +44,7 @@ div#side-bar-row {
 b#article-title {
     font-size: 17pt;
     padding-left: 0px;
-    padding-top: -7px;
+    /* padding-top: 13px; */
 }
 
 div#side-nav-title {
@@ -194,8 +194,9 @@ img#placeholder-img {
 
 h3#titleh3 {
     margin-left: 12px;
-    color: dimgray;
+    color: rgb(58, 58, 58);
     /* margin-top: 2px; */
+    padding-top: 4px;
 }
 
 
@@ -251,4 +252,9 @@ img#user-pic {
 div#username {
     margin-top: -24px;
     margin-left: 36px;
+    padding-bottom: 0px;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: 600;
+    color: rgb(140, 140, 140);
 }

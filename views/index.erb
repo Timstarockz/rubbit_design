@@ -11,35 +11,35 @@
 </head>
 <script type="text/javascript">
 
-$(function() {
-
-  
-
-  function addClassToElementInViewport(element, newClass) {
-    if (inViewport(element)) {
-      element.addClass(newClass);
-    }
-  }
-
-  function inViewport(element) {
-    if (typeof jQuery === "function" && element instanceof jQuery) {
-      element = element[0];
-    }
-    var elementBounds = element.getBoundingClientRect();
-    return (
-      elementBounds.top >= 0 &&
-      elementBounds.left >= 0 &&
-      elementBounds.bottom <= $(window).height() &&
-      elementBounds.right <= $(window).width()
-    );
-  }
-  
-  $(window).on('load resize scroll', function() {
-    addClassToElementInViewport($('.cell'));
-    // 👏 repeat as needed ...
-  });
-
-});
+// $(function() {
+//
+//
+//
+//   function addClassToElementInViewport(element, newClass) {
+//     if (inViewport(element)) {
+//       element.addClass(newClass);
+//     }
+//   }
+//
+//   function inViewport(element) {
+//     if (typeof jQuery === "function" && element instanceof jQuery) {
+//       element = element[0];
+//     }
+//     var elementBounds = element.getBoundingClientRect();
+//     return (
+//       elementBounds.top >= 0 &&
+//       elementBounds.left >= 0 &&
+//       elementBounds.bottom <= $(window).height() &&
+//       elementBounds.right <= $(window).width()
+//     );
+//   }
+//
+//   $(window).on('load resize scroll', function() {
+//     addClassToElementInViewport($('.cell'));
+//     // 👏 repeat as needed ...
+//   });
+//
+// });
 
 </script>
 <body>
